@@ -64,6 +64,7 @@ public class CustomerServiceImpl implements CustomerService {
 		newTrip.setFromLocation(fromLocation);
 		newTrip.setToLocation(toLocation);
 		newTrip.setDistanceInKm(distanceInKm);
+		newTrip.setStatus(TripStatus.CONFIRMED);
 		Customer customer = customerRepository2.findById(customerId).get();
 		newTrip.setCustomer(customer);
 		newTrip.setDriver(driver);
