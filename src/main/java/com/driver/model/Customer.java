@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "customers")
+@Table
 public class Customer {
 
     @Id
@@ -16,7 +16,7 @@ public class Customer {
 
     private String password;
 
-    @OneToMany(mappedBy = "customers", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList = new ArrayList<>();
 
     public Customer(int customerId, String mobile, String password, List<TripBooking> tripBookingList) {

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Driver;
 
 @Entity
-@Table(name = "cabs")
+@Table
 public class Cab {
 
     @Id

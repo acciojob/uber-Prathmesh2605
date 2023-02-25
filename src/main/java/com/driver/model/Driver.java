@@ -7,7 +7,7 @@ import java.util.*;
 
 
 @Entity
-@Table(name = "drivers")
+@Table
 public class Driver {
 
     @Id
@@ -22,7 +22,7 @@ public class Driver {
    @JoinColumn
    private Cab cab;
 
-   @OneToMany(mappedBy = "drivers" ,cascade = CascadeType.ALL)
+   @OneToMany(mappedBy = "driver" ,cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList = new ArrayList<>();
 
     public Driver(int driverId, String mobile, String password, List<TripBooking> tripBookingList) {
